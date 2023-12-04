@@ -44,7 +44,7 @@ const ProductCard = ({ product}) => {
 
 
   return (
-    <div className=" relative max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden my-10 shadow_outer hover:bg-richblack-25 hover:scale-105 transition-all duration-300">
+    <div className=" relative max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden my-10 shadow_outer hover:bg-richblack-25 hover:scale-110 transition-all duration-300">
       <img src={image} alt={title} className="w-full h-48 object-contain" style={{ background: 'rgba(255, 255, 255, 0.5)' }}/>
       <div className="py-4 px-6">
         <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
