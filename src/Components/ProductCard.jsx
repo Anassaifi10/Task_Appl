@@ -44,8 +44,8 @@ const ProductCard = ({ product}) => {
 
 
   return (
-    <div className=" relative max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden my-10">
-      <img src={image} alt={title} className="w-full h-48 object-contain" />
+    <div className=" relative max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden my-10 shadow_outer hover:bg-richblack-25 hover:scale-105 transition-all duration-300">
+      <img src={image} alt={title} className="w-full h-48 object-contain" style={{ background: 'rgba(255, 255, 255, 0.5)' }}/>
       <div className="py-4 px-6">
         <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
         <p className="mt-2 text-sm text-gray-600 line-clamp-3">
@@ -75,19 +75,22 @@ const ProductCard = ({ product}) => {
             </button>
           )) || (
             
-             <div className='bg-blue-500 text-white px-4 py-2 rounded-md mr-2 flex gap-5'>
-              <button
-                onClick={removeFromCart}
-              >
-              <MdDelete/>
-              </button>
-              <span className="text-sm text-gray-600 mr-2">{" "}{quantity}{" "}</span>
-              <button
-                onClick={addToCart}
-              >
-                <IoMdAdd/>
-              </button>
+            <div className='bg-blue-500 text-white px-4 py-2 rounded-md mr-2 flex gap-5'>
+                  <button
+                    onClick={removeFromCart}
+                    className='border-r border-white pr-2'
+                  >
+                    <MdDelete />
+                  </button>
+                  <span className="text-sm text-gray-600 mr-2">{quantity}</span>
+                  <button
+                    onClick={addToCart}
+                    className='border-l border-white pl-2'
+                  >
+                    <IoMdAdd />
+                  </button>
             </div>
+
     
           )}
         </div>
