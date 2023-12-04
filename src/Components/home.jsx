@@ -13,7 +13,7 @@ const Home = () => {
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
-    <div className=' flex flex-col justify-center items-center'>
+    <div className=' flex flex-col justify-center items-center my-10'>
     <div className="m-auto lg:w-8/12 flex flex-wrap justify-center">
       {currentItems.map(product => (
         <ProductCard key={product.id} product={product} />
